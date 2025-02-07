@@ -1,0 +1,17 @@
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/EspeciesApplication.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/api/EspecieApi.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/api/EspecieController.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/api/EspecieControllerAdvice.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/api/EstadoController.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/config/OpenApiConfig.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/domain/Especie.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/domain/EspecieAlreadyExistsException.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/domain/Familia.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/domain/Genero.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/dto/RegistroEspecieRequest.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/repository/EspecieRepository.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/repository/FamiliaRepository.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/service/EspecieService.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/service/EspecieServiceImpl.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/service/FamiliaService.java
+/home/clouduser/Documents/especies/src/main/java/com/openapi/taxonomiaservice/especies/service/FamiliaServiceImpl.java

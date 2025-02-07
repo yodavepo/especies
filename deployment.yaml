@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: especies
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: especies
+  template:
+    metadata:
+      labels:
+        app: especies
+    spec:
+      containers:
+        - name: especies
+          image: davepo/proyecto-cloud:v2
+          ports:
+            - containerPort: 8080
+

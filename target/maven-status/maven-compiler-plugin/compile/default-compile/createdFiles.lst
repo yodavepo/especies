@@ -1,0 +1,17 @@
+com/openapi/taxonomiaservice/especies/EspeciesApplication.class
+com/openapi/taxonomiaservice/especies/repository/FamiliaRepository.class
+com/openapi/taxonomiaservice/especies/service/FamiliaServiceImpl.class
+com/openapi/taxonomiaservice/especies/api/EspecieControllerAdvice.class
+com/openapi/taxonomiaservice/especies/domain/Familia.class
+com/openapi/taxonomiaservice/especies/service/FamiliaService.class
+com/openapi/taxonomiaservice/especies/domain/Genero.class
+com/openapi/taxonomiaservice/especies/config/OpenApiConfig.class
+com/openapi/taxonomiaservice/especies/api/EspecieApi.class
+com/openapi/taxonomiaservice/especies/service/EspecieService.class
+com/openapi/taxonomiaservice/especies/api/EstadoController.class
+com/openapi/taxonomiaservice/especies/repository/EspecieRepository.class
+com/openapi/taxonomiaservice/especies/domain/EspecieAlreadyExistsException.class
+com/openapi/taxonomiaservice/especies/service/EspecieServiceImpl.class
+com/openapi/taxonomiaservice/especies/domain/Especie.class
+com/openapi/taxonomiaservice/especies/api/EspecieController.class
+com/openapi/taxonomiaservice/especies/dto/RegistroEspecieRequest.class
