@@ -8,7 +8,7 @@ Para el desarrollo de este proyecto, utilizamos la siguiente estrategia de ramas
 
 ### Ejemplo de Flujo de Trabajo
 
-1. Crear una rama `feature/nueva-caracteristica` desde `develop`.
-2. Trabajar en la rama `feature/nueva-caracteristica`.
+1. Crear una rama `feature/unit-testing` desde `develop`.
+2. Trabajar en la rama `feature/unit-testing`.
 3. Hacer un merge request a `develop` cuando la característica esté lista.
 4. Una vez que todas las características estén integradas en `develop`, hacer un merge a `main` para la liberación.
