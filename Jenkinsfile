@@ -18,8 +18,7 @@ pipeline {
 
         DOCKERHUB_CREDENTIALS = credentials('dvp-docker-registry')
 
-        DOCKER_IMAGE = 'davepo/especies:$TAG'
-
+        DOCKER_IMAGE = 'davepo/especies:v1'
     }
 
     
