@@ -1,0 +1,39 @@
+apiVersion: tekton.dev/v1beta1
+
+kind: TaskRun
+
+metadata:
+
+  name: git-clone-run  # Nombre específico en lugar de generateName
+
+  namespace: diploe2-dvp
+
+spec:
+
+  taskRef:
+
+    kind: Task
+
+    name: git-clone
+
+  podTemplate:
+
+    securityContext:
+
+      fsGroup: 65532
+
+  params:
+
+    - name: url
+
+      value: https://github.com/yodavepo/especies
+
+    - name: deleteExisting
+
+      value: "true"
+
+  workspaces:
+
+    - name: output
+
+      emptyDir: {} 

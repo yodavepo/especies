@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+
+kind: TaskRun
+
+metadata:
+
+  name: hello-world-taskrun  # El nombre del TaskRun va aquí
+
+  namespace: diploe2-dvp
+
+spec:
+
+  taskRef:
+
+    name: hello-world  # Nombre de la Task que se ejecutará
