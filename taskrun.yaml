@@ -31,6 +31,10 @@ spec:
     - name: deleteExisting
 
       value: "true"  # Elimina el contenido existente antes de clonar
+   
+    - name: revision
+      
+      value: main
 
   workspaces:
 
