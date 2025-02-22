@@ -14,26 +14,28 @@ spec:
 
     kind: Task
 
-    name: git-clone
+    name: git-clone  # Referencia a la Task "git-clone"
 
   podTemplate:
 
     securityContext:
 
-      fsGroup: 65532
+      fsGroup: 65532  # Permisos de escritura en el volumen
 
   params:
 
     - name: url
 
-      value: https://github.com/yodavepo/especies
+      value: https://github.com/yodavepo/especies  # URL del repositorio a clonar
 
     - name: deleteExisting
 
-      value: "true"
+      value: "true"  # Elimina el contenido existente antes de clonar
 
   workspaces:
 
     - name: output
 
-      emptyDir: {} 
+      persistentVolumeClaim:  # Usa un volumen persistente en lugar de emptyDir
+
+        claimName: workspace  # Nombre del PersistentVolumeClaim (PVC)
