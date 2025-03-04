@@ -1,0 +1,127 @@
+apiVersion: tekton.dev/v1beta1
+
+kind: Pipeline
+
+metadata:
+
+  name: pipeline-ci
+
+spec:
+
+  description: |
+
+    Pipeline simplificada para clonar un repositorio, compilar con Maven y construir una imagen con Buildah.
+
+  params:
+
+    - name: repo-url
+
+      type: string
+
+    - name: maven-image
+
+      type: string
+
+    - name: image-name
+
+      type: string
+
+    - name: registry-url
+
+      type: string
+
+  workspaces:
+
+    - name: workspace
+
+    - name: maven-settings
+
+  tasks:
+
+    - name: fetch-repository
+
+      taskRef:
+
+        kind: Task
+
+        name: git-clone
+
+      params:
+
+        - name: url
+
+          value: $(params.repo-url)
+
+        - name: deleteExisting
+
+          value: "true"
+
+      workspaces:
+
+        - name: output
+
+          workspace: workspace
+
+    - name: maven
+
+      taskRef:
+
+        name: maven
+
+      runAfter:
+
+        - fetch-repository
+
+      params:
+
+        - name: GOALS
+
+          value:
+
+            - clean
+
+            - package
+
+        - name: MAVEN_IMAGE
+
+          value: $(params.maven-image)
+
+      workspaces:
+
+        - name: maven-settings
+
+          workspace: maven-settings
+
+        - name: source
+
+          workspace: workspace
+
+    - name: buildah
+
+      taskRef:
+
+        name: buildah
+
+      runAfter:
+
+        - maven
+
+      params:
+
+        - name: IMAGE
+
+          value: $(params.image-name)
+
+        - name: DOCKERFILE
+
+          value: "Dockerfile"
+
+        - name: REGISTRY_URL
+
+          value: $(params.registry-url)
+
+      workspaces:
+
+        - name: source
+
+          workspace: workspace
