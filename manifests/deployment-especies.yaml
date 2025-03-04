@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: especies
+
+  namespace: diploe2-dvp
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: especies
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: especies
+
+    spec:
+
+      containers:
+
+        - name: especies
+
+          image: davepo/especies:v1
+
+          ports:
+
+            - containerPort: 8080

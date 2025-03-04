@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+
+kind: Role
+
+metadata:
+
+  namespace: diploe2-dvp
+
+  name: tekton-role # Nombre descriptivo
+
+rules:
+
+- apiGroups: ["apps"] # API group para deployments
+
+  resources: ["deployments"] # Recurso: deployments
+
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] # Permisos: todos los necesarios
