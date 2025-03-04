@@ -1,0 +1,41 @@
+apiVersion: tekton.dev/v1beta1
+
+kind: TaskRun
+
+metadata:
+
+  generateName: kubernetes-actions-run
+
+  namespace: diploe2-dvp
+
+spec:
+
+  serviceAccountName: tekton-sa
+
+  taskRef:
+
+    name: kubernetes-actions
+
+  params:
+
+    - name: script
+
+      value: |
+
+        kubectl delete deployment especies || true
+
+        kubectl create deployment especies --image=docker.io/davepo/especies:v2
+
+        echo "----------"
+
+        kubectl get deployment
+
+  workspaces:
+
+    - name: kubeconfig-dir
+
+      emptyDir: {}
+
+    - name: manifest-dir
+
+      emptyDir: {}
